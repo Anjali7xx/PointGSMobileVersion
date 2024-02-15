@@ -140,6 +140,7 @@ window.addEventListener('load', function(){
     }
 
     window.addEventListener('touchmove', (e) => {
+    e.preventDefault();
         const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1);
         console.log(detectPixelColor);
         const pc = detectPixelColor.data;
